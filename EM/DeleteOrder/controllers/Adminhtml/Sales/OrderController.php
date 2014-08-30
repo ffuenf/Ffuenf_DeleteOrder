@@ -37,6 +37,7 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
 		$table_sales_flat_order_status_history= Mage::getSingleton('core/resource')->getTableName('sales_flat_order_status_history');					
 		$table_sales_flat_order_grid= Mage::getSingleton('core/resource')->getTableName('sales_flat_order_grid');						
 		$table_log_quote= Mage::getSingleton('core/resource')->getTableName('log_quote');				
+		$table_sales_order_tax= Mage::getSingleton('core/resource')->getTableName('sales_order_tax');
         $quoteId='';		
 		if (!empty($orderIds)) {
             foreach ($orderIds as $orderId) {
@@ -184,7 +185,9 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
 							$write->query("DELETE FROM ".$table_sales_flat_order_grid."                 WHERE increment_id='".mysql_escape_string($incId)."'");
 	
 						}
-						
+						if(in_array($table_sales_order_tax,$rsc_table)) {
+							$write->query("DELETE FROM ".$table_sales_order_tax." WHERE order_id='".mysql_escape_string($orderId)."'");
+						}
 						$query="show tables like '%".$table_log_quote."'";
 						$rsc_table_l=$write->fetchCol($query);	
 						if($quoteId&&$rsc_table_l){						
