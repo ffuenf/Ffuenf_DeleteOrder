@@ -109,7 +109,7 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
             $write->query("DELETE FROM ".$table_sales_flat_shipment_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_shipment_track,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_shipment_track." WHERE order_id  IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_shipment_track." WHERE order_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE parent_id ='".mysql_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_shipment,$rsc_table)){
             $write->query("DELETE FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_escape_string($orderId)."'");
