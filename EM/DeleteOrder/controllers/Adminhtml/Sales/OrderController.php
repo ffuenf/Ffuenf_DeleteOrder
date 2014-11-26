@@ -46,37 +46,37 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
           $rs=$write->fetchAll($query);*/
           $incId=$order->increment_id;
           if(in_array($table_sales_flat_order,$rsc_table)){
-            $query='SELECT entity_id   FROM  '.$table_sales_flat_order.' WHERE increment_id="'.mysql_escape_string($incId).'"';
+            $query='SELECT entity_id   FROM  '.$table_sales_flat_order.' WHERE increment_id="'.mysql_real_escape_string($incId).'"';
             $rs=$write->fetchAll($query);
-            $query='SELECT quote_id    FROM   '.$table_sales_flat_order.' WHERE entity_id="'.mysql_escape_string($orderId).'"';
+            $query='SELECT quote_id    FROM   '.$table_sales_flat_order.' WHERE entity_id="'.mysql_real_escape_string($orderId).'"';
             $rs1=$write->fetchAll($query);
             $quoteId=$rs1[0]['quote_id'];
           }
           $query='SET FOREIGN_KEY_CHECKS=1';
           $rs3=$write->query($query);
           if(in_array($table_sales_flat_creditmemo_comment,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_creditmemo_comment." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_creditmemo." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_creditmemo_comment." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_creditmemo." WHERE order_id='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array('sales_flat_creditmemo_item',$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_creditmemo_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_creditmemo." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_creditmemo_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_creditmemo." WHERE order_id='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_creditmemo,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_creditmemo." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_creditmemo." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_creditmemo_grid,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_creditmemo_grid." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_creditmemo_grid." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_invoice_comment,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_invoice_comment." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_invoice." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_invoice_comment." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_invoice." WHERE order_id='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_invoice_item,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_invoice_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_invoice." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_invoice_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_invoice." WHERE order_id='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_invoice,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_invoice." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_invoice." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_invoice_grid,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_invoice_grid." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_invoice_grid." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if($quoteId){
             if(in_array($table_sales_flat_quote_address_item,$rsc_table)){
@@ -103,40 +103,40 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
             }
           }
           if(in_array($table_sales_flat_shipment_comment,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_shipment_comment." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_shipment_comment." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_shipment_item,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_shipment_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_shipment_item." WHERE parent_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_shipment_track,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_shipment_track." WHERE order_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE parent_id ='".mysql_escape_string($orderId)."')");
+            $write->query("DELETE FROM ".$table_sales_flat_shipment_track." WHERE order_id IN (SELECT entity_id FROM ".$table_sales_flat_shipment." WHERE parent_id ='".mysql_real_escape_string($orderId)."')");
           }
           if(in_array($table_sales_flat_shipment,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_shipment." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_shipment_grid,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_shipment_grid." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_shipment_grid." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_order,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_order." WHERE entity_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_order." WHERE entity_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_order_address,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_order_address." WHERE parent_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_order_address." WHERE parent_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_order_item,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_order_item." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_order_item." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_order_payment,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_order_payment." WHERE parent_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_order_payment." WHERE parent_id='".mysql_real_escape_string($orderId)."'");
           }
           if(in_array($table_sales_flat_order_status_history,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_order_status_history." WHERE parent_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_order_status_history." WHERE parent_id='".mysql_real_escape_string($orderId)."'");
           }
           if($incId&&in_array($table_sales_flat_order_grid,$rsc_table)){
-            $write->query("DELETE FROM ".$table_sales_flat_order_grid." WHERE increment_id='".mysql_escape_string($incId)."'");
+            $write->query("DELETE FROM ".$table_sales_flat_order_grid." WHERE increment_id='".mysql_real_escape_string($incId)."'");
           }
           if(in_array($table_sales_order_tax,$rsc_table)) {
-            $write->query("DELETE FROM ".$table_sales_order_tax." WHERE order_id='".mysql_escape_string($orderId)."'");
+            $write->query("DELETE FROM ".$table_sales_order_tax." WHERE order_id='".mysql_real_escape_string($orderId)."'");
           }
           $query="show tables like '%".$table_log_quote."'";
           $rsc_table_l=$write->fetchCol($query);
