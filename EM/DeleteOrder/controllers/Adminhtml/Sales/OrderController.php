@@ -35,12 +35,13 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
     $tbl_sales_flat_order_status_history = $coreResource->getTableName('sales_flat_order_status_history');
     $tbl_sales_flat_order_grid = $coreResource->getTableName('sales_flat_order_grid');
     $tbl_log_quote = $coreResource->getTableName('log_quote');
-    $rsc_tbl_l = $coreWrite->fetchCol('show tables like `%'.$tbl_log_quote.'`');
+    $rsc_tbl_l = $coreWrite->fetchCol('SHOW TABLES LIKE ?', '%'.$tbl_log_quote);
     $tbl_sales_order_tax = $coreResource->getTableName('sales_order_tax');
     $sales_order_tax_item = $coreResource->getTableName('sales_order_tax_item');
 
     if (!empty($orderIds)) {
-      foreach ($orderIds as (int)$orderId) {
+      foreach ($orderIds as $orderId) {
+        $orderId = (int)$orderId;
         $query = null;
         $order = Mage::getModel('sales/order')->load($orderId);
         if($order->increment_id) {
@@ -52,10 +53,10 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
           }
           $coreWrite->raw_query('SET FOREIGN_KEY_CHECKS=1');
           if (in_array($tbl_sales_flat_creditmemo_comment, $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_creditmemo_comment.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_creditmemo.'` WHERE order_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_creditmemo_comment.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_creditmemo.'` WHERE order_id='.$orderId.')');
           }
           if (in_array('sales_flat_creditmemo_item', $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_creditmemo_item.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_creditmemo.'` WHERE order_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_creditmemo_item.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_creditmemo.'` WHERE order_id='.$orderId.')');
           }
           if (in_array($tbl_sales_flat_creditmemo, $rsc_tbl)) {
             $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_creditmemo.'` WHERE order_id='.$orderId);
@@ -64,10 +65,10 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
             $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_creditmemo_grid.'` WHERE order_id='.$orderId);
           }
           if (in_array($tbl_sales_flat_invoice_comment, $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_invoice_comment.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_invoice.'` WHERE order_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_invoice_comment.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_invoice.'` WHERE order_id='.$orderId.')');
           }
           if (in_array($tbl_sales_flat_invoice_item, $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_invoice_item.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_invoice.'` WHERE order_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_invoice_item.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_invoice.'` WHERE order_id='.$orderId.')');
           }
           if (in_array($tbl_sales_flat_invoice, $rsc_tbl)) {
             $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_invoice.'` WHERE order_id='.$orderId);
@@ -77,13 +78,13 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
           }
           if ($quoteId) {
             if (in_array($tbl_sales_flat_quote_address_item, $rsc_tbl)) {
-              $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote_address_item.'` WHERE parent_item_id IN (SELECT address_id FROM `'.$tbl_sales_flat_quote_address.'` WHERE quote_id='.$quoteId);
+              $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote_address_item.'` WHERE parent_item_id IN (SELECT address_id FROM `'.$tbl_sales_flat_quote_address.'` WHERE quote_id='.$quoteId.')');
             }
             if (in_array($tbl_sales_flat_quote_shipping_rate, $rsc_tbl)) {
-              $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote_shipping_rate.'` WHERE address_id IN (SELECT address_id FROM `'.$tbl_sales_flat_quote_address.'` WHERE quote_id='.$quoteId);
+              $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote_shipping_rate.'` WHERE address_id IN (SELECT address_id FROM `'.$tbl_sales_flat_quote_address.'` WHERE quote_id='.$quoteId.')');
             }
             if (in_array($tbl_sales_flat_quote_item_option, $rsc_tbl)) {
-              $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote_item_option.'` WHERE item_id IN (SELECT item_id FROM `'.$tbl_sales_flat_quote_item.'` WHERE quote_id='.$quoteId);
+              $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote_item_option.'` WHERE item_id IN (SELECT item_id FROM `'.$tbl_sales_flat_quote_item.'` WHERE quote_id='.$quoteId.')');
             }
             if (in_array($tbl_sales_flat_quote, $rsc_tbl)) {
               $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_quote.'` WHERE entity_id='.$quoteId);
@@ -99,13 +100,13 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
             }
           }
           if (in_array($tbl_sales_flat_shipment_comment, $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment_comment.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_shipment.'` WHERE order_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment_comment.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_shipment.'` WHERE order_id='.$orderId.')');
           }
           if (in_array($tbl_sales_flat_shipment_item, $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment_item.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_shipment.'` WHERE order_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment_item.'` WHERE parent_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_shipment.'` WHERE order_id='.$orderId.')');
           }
           if (in_array($tbl_sales_flat_shipment_track, $rsc_tbl)) {
-            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment_track.'` WHERE order_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_shipment.'` WHERE parent_id='.$orderId);
+            $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment_track.'` WHERE order_id IN (SELECT entity_id FROM `'.$tbl_sales_flat_shipment.'` WHERE parent_id='.$orderId.')');
           }
           if (in_array($tbl_sales_flat_shipment, $rsc_tbl)) {
             $coreWrite->raw_query('DELETE FROM `'.$tbl_sales_flat_shipment.'` WHERE order_id='.$orderId);
