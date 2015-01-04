@@ -38,4 +38,11 @@
       </adminhtml>
     </routers>
   </admin>
+  <phpunit>
+    <suite>
+      <modules>
+        <EM_DeleteOrder/>
+      </modules>
+    </suite>
+  </phpunit>
 </config>

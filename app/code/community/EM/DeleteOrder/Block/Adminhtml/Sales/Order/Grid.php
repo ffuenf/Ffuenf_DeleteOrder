@@ -5,10 +5,12 @@ class EM_DeleteOrder_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml_Blo
   */
   protected function _prepareMassaction() {
     $retValue = parent::_prepareMassaction();
-    $this->getMassactionBlock()->addItem('delete_order', array(
-      'label'=> Mage::helper('sales')->__('Delete order'),
-      'url'  => $this->getUrl('*/sales_order/deleteorder'),
-    ));
+    if (Mage::getStoreConfig('system/em_deleteorder/enable')) {
+      $this->getMassactionBlock()->addItem('delete_order', array(
+        'label'=> Mage::helper('sales')->__('Delete order'),
+        'url'  => $this->getUrl('*/sales_order/deleteorder'),
+      ));
+    }
     return $retValue;
   }
 }

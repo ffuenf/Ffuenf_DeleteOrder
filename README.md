@@ -1,8 +1,10 @@
 EM_DeleteOrder
 ==============
-[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/EM_DeleteOrder/badges/quality-score.png?b=php5.5-compat)][scrutinizer]
+[![GitHub tag](http://img.shields.io/github/tag/ffuenf/EM_DeleteOrder.svg)][tag]
+[![Build Status](http://img.shields.io/travis/ffuenf/EM_DeleteOrder.svg)][travis]
 
-[scrutinizer]: https://scrutinizer-ci.com/g/ffuenf/EM_DeleteOrder/?b=php5.5-compat
+[tag]: https://github.com/ffuenf/EM_DeleteOrder
+[travis]: https://travis-ci.org/ffuenf/EM_DeleteOrder
 
 Enhance Magento feature with ability to delete orders
 
