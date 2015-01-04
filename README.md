@@ -1,5 +1,8 @@
 EM_DeleteOrder
 ==============
+[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/EM_DeleteOrder/badges/quality-score.png?b=php5.5-compat)][scrutinizer]
+
+[scrutinizer]: https://scrutinizer-ci.com/g/ffuenf/EM_DeleteOrder/?b=php5.5-compat
 
 Enhance Magento feature with ability to delete orders
 

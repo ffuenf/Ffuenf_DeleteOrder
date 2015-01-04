@@ -37,17 +37,14 @@ class EM_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sale
     $tbl_log_quote = $coreResource->getTableName('log_quote');
     $rsc_tbl_l = $coreWrite->fetchCol('SHOW TABLES LIKE ?', '%'.$tbl_log_quote);
     $tbl_sales_order_tax = $coreResource->getTableName('sales_order_tax');
-    $sales_order_tax_item = $coreResource->getTableName('sales_order_tax_item');
 
     if (!empty($orderIds)) {
       foreach ($orderIds as $orderId) {
         $orderId = (int)$orderId;
-        $query = null;
         $order = Mage::getModel('sales/order')->load($orderId);
         if($order->increment_id) {
           $incId = (int)$order->increment_id;
           if (in_array($tbl_sales_flat_order, $rsc_tbl)) {
-            $rs = $coreWrite->fetchAll('SELECT entity_id FROM `'.$tbl_sales_flat_order.'` WHERE increment_id='.$incId);
             $rs1 = $coreWrite->fetchAll('SELECT quote_id FROM `'.$tbl_sales_flat_order.'` WHERE entity_id='.$orderId);
             $quoteId = (int)$rs1[0]['quote_id'];
           }
