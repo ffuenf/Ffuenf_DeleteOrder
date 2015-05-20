@@ -1,2 +1,2 @@
-app/code/community/EM/DeleteOrder app/code/community/EM/DeleteOrder
-app/etc/modules/EM_DeleteOrder.xml app/etc/modules/EM_DeleteOrder.xml
+app/code/local/Ffuenf/DeleteOrder app/code/local/Ffuenf/DeleteOrder
+app/etc/modules/Ffuenf_DeleteOrder.xml app/etc/modules/Ffuenf_DeleteOrder.xml

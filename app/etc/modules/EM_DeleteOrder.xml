@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-  <modules>
-    <EM_DeleteOrder>
-      <active>true</active>
-      <codePool>community</codePool>
-    </EM_DeleteOrder>
-  </modules>
-</config>

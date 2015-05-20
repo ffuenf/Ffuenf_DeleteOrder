@@ -1,0 +1,2 @@
+config:
+  default/deleteorder/general/enabled: 1

@@ -1,13 +1,20 @@
 {
-  "name": "ffuenf/EM_DeleteOrder",
-  "license": "OSL-3.0",
+  "name": "Ffuenf/Ffuenf_DeleteOrder",
+  "license": "MIT",
+  "description": "Enhance Magento feature with ability to delete orders",
+  "authors": [
+    {
+      "name": "Achim Rosenhagen",
+      "email": "a.rosenhagen@ffuenf.de"
+    }
+  ],
   "type": "magento-module",
   "require": {
-    "magento-hackathon/magento-composer-installer": "*",
+    "aoepeople/composer-installers": "*",
     "colinmollenhour/modman": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "3.7.*"
+    "phpunit/phpunit": "4.*"
   },
   "repositories": [
     {
@@ -16,6 +23,16 @@
     }
   ],
   "extra": {
-    "magento-root-dir": "./magento/"
+    "magento-root-dir": "./magento/",
+    "map": [
+      [
+        "app/code/local/Ffuenf/DeleteOrder",
+        "app/code/local/Ffuenf/DeleteOrder"
+      ],
+      [
+        "app/etc/modules/Ffuenf_DeleteOrder.xml",
+        "app/etc/modules/Ffuenf_DeleteOrder.xml"
+      ]
+    ]
   }
 }
