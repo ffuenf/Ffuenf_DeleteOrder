@@ -18,15 +18,8 @@ env:
   - MAGENTO_VERSION=magento-ce-1.6.2.0
   global:
     secure: druUINAVvcpDwfG17bpTf5vNU0nyWwLMneDODE8+kOJgcgaamBuhoVW7XSL5ZxtpDednV0XFj6qOzZdCmjtsLcYIUGX/5yd2zLjU6uZdHQnYaNPNHYb7S0OTkcgzbiUCN87A6v6Wxy/+yZATBOP21B5qE5+df5FHLHvRPHQXY30=
-before_script:
-    - composer install
-    - curl -OL https://scrutinizer-ci.com/ocular.phar
-    - phpenv rehash
 script:
     - curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/testing/setup.sh | bash
-after_script:
-    - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
-    - ./vendor/bin/test-reporter
 notifications:
   slack:
     secure: PtZquff6TseuVBnJwqViT2snkBkDn44gwdcUWybVQ/9GlLVdFjTH4YCsGqUkM3ADayaVe2j/ZFkz+wz05GkiJDX07zOAVsqCX+1AHZBK/0ftWXXFqC2raWKlDqIENnahEHE4OKp0unTROIej4/WMBOdwfuFuvtnyFeRFb8w5liQ=
