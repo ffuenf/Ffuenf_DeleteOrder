@@ -1,3 +1,5 @@
+inherit: true
+
 before_commands:
     - git clone https://github.com/magento-ecg/coding-standard ../magento-ecg/
 
@@ -8,13 +10,15 @@ tools:
     php_sim: true
     php_changetracking: true
     php_mess_detector: true
+    php_cs_fixer: true
     php_pdepend: true
     php_analyzer: true
     external_code_coverage:
         timeout: 600
+    sensiolabs_security_checker: true
     php_code_sniffer:
         config:
-            standard: Zend
+            standard: 'Zend'
             include_standards:
                 - ../magento-ecg/
 
