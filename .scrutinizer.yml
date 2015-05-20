@@ -1,17 +1,24 @@
-before_commands:
-    - git clone https://github.com/magento-ecg/coding-standard ../magento-ecg/
 imports:
     - php
+filter:
+    excluded_paths:
+        - .vagrant/*
 tools:
-    php_sim: true
-    php_pdepend: true
-    php_analyzer: true
     external_code_coverage: false
+    php_changetracking: true
+    php_mess_detector: true
+    php_pdepend: true
+    php_sim:
+      filter:
+        excluded-paths: [ spec/*, vendor/* ]
+    php_analyzer:
+      filter:
+        excluded-paths: [ spec/*, vendor/* ]
     php_code_sniffer:
+      filter:
+        excluded-paths: [ spec/*, vendor/* ]
         config:
-            standard: Zend
-            include_standards:
-                - ../magento-ecg/
+            standard: "Zend"
 checks:
     php:
         align_assignments: false
