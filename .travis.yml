@@ -19,12 +19,17 @@ env:
   global:
     secure: druUINAVvcpDwfG17bpTf5vNU0nyWwLMneDODE8+kOJgcgaamBuhoVW7XSL5ZxtpDednV0XFj6qOzZdCmjtsLcYIUGX/5yd2zLjU6uZdHQnYaNPNHYb7S0OTkcgzbiUCN87A6v6Wxy/+yZATBOP21B5qE5+df5FHLHvRPHQXY30=
 before_script:
-- curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-- phpenv rehash
-- git clone https://github.com/magento-ecg/coding-standard $(pear config-get php_dir)/PHP/CodeSniffer/Standards/Ecg
+    - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    - curl -OL https://scrutinizer-ci.com/ocular.phar
+    - phpenv rehash
+    - git clone https://github.com/magento-ecg/coding-standard $(pear config-get php_dir)/PHP/CodeSniffer/Standards/Ecg
 script:
-- php phpcs.phar --config-set --standard=$(pear config-get php_dir)/PHP/CodeSniffer/Standards/Ecg --encoding=utf-8 --report-width=180 ./app
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/testing/setup.sh | bash
+    - mkdir -p build/logs
+    - php phpcs.phar --config-set --standard=$(pear config-get php_dir)/PHP/CodeSniffer/Standards/Ecg --encoding=utf-8 --report-width=180 ./app
+    - curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/testing/setup.sh | bash
+after_script:
+    - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
 notifications:
   slack:
     secure: PtZquff6TseuVBnJwqViT2snkBkDn44gwdcUWybVQ/9GlLVdFjTH4YCsGqUkM3ADayaVe2j/ZFkz+wz05GkiJDX07zOAVsqCX+1AHZBK/0ftWXXFqC2raWKlDqIENnahEHE4OKp0unTROIej4/WMBOdwfuFuvtnyFeRFb8w5liQ=
+
