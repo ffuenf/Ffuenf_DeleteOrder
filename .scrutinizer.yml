@@ -2,7 +2,6 @@ before_commands:
     - git clone https://github.com/magento-ecg/coding-standard ../magento-ecg/
 imports:
     - php
-    - javascript
 tools:
     php_sim: true
     php_pdepend: true
@@ -149,96 +148,6 @@ checks:
         newline_at_end_of_file: true
         fix_line_ending: true
         avoid_perl_style_comments: true
-    javascript:
-        yoda:
-            setting: 'Disallow Yoda Conditions'
-        wrap_regex: true
-        wrap_iife: true
-        vars_on_top: true
-        valid_typeof: true
-        valid_jsdoc: true
-        use_isnan: true
-        space_return_throw_case: true
-        radix: true
-        one_var: true
-        no_wrap_func: true
-        no_with: true
-        no_void: true
-        no_use_before_define: true
-        no_unused_vars: true
-        no_unused_expressions: true
-        no_unreachable: true
-        no_underscore_dangle: true
-        no_undefined: true
-        no_undef_init: true
-        no_undef: true
-        no_trailing_spaces: true
-        no_sparse_arrays: true
-        no_space_before_semi: true
-        no_shadow_restricted_names: true
-        no_shadow: true
-        no_sequences: true
-        no_self_compare: true
-        no_script_url: true
-        no_return_assign: true
-        no_reserved_keys: true
-        no_redeclare: true
-        no_proto: true
-        no_process_exit: true
-        no_process_env: true
-        no_octal_escape: true
-        no_octal: true
-        no_obj_calls: true
-        no_new_wrappers: true
-        no_new_require: true
-        no_new_func: true
-        no_nested_ternary: true
-        no_new: true
-        no_negated_in_lhs: true
-        no_native_reassign: true
-        no_multi_str: true
-        no_mixed_spaces_and_tabs: true
-        no_loop_func: true
-        no_lonely_if: true
-        no_lone_blocks: true
-        no_labels: true
-        no_label_var: true
-        no_iterator: true
-        no_irregular_whitespace: true
-        no_invalid_regexp: true
-        no_inner_declarations: true
-        no_implied_eval: true
-        no_func_assign: true
-        no_floating_decimal: true
-        no_fallthrough: true
-        no_extra_strict: true
-        no_extra_boolean_cast: true
-        no_extra_bind: true
-        no_ex_assign: true
-        no_eval: true
-        no_eq_null: true
-        no_empty_label: true
-        no_empty_class: true
-        no_empty: true
-        no_dupe_keys: true
-        no_div_regex: true
-        camelcase: true
-        block_scoped_var: true
-        comma_style:
-            style: 'At the end of the line'
-        curly: true
-        dot_notation: true
-        eol_last: true
-        new_parens: true
-        no_alert: true
-        no_caller: true
-        no_catch_shadow: true
-        no_console: true
-        no_comma_dangle: true
-        no_constant_condition: true
-        no_debugger: true
-        no_delete_var: true
-
 coding_style:
     php:
         spaces:

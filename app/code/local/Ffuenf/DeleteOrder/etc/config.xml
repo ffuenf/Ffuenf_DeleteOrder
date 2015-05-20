@@ -1,4 +1,22 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Ffuenf_DeleteOrder extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category   Ffuenf
+ * @package    Ffuenf_DeleteOrder
+ * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+ * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @license    http://opensource.org/licenses/mit-license.php MIT License
+*/
+-->
 <config>
     <modules>
         <Ffuenf_DeleteOrder>
@@ -37,18 +55,18 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <Ffuenf_DeleteOrder_Adminhtml before="Mage_Adminhtml">Ffuenf_DeleteOrder_Adminhtml</Ffuenf_DeleteOrder_Adminhtml>
+                        <deleteorder after="Mage_Adminhtml">Ffuenf_DeleteOrder</deleteorder>
                     </modules>
                 </args>
             </adminhtml>
         </routers>
     </admin>
     <default>
-        <system>
-            <deleteorder>
+        <deleteorder>
+            <general>
                 <enabled>0</enabled>
-            </deleteorder>
-        </system>
+            </general>
+        </deleteorder>
     </default>
     <phpunit>
         <suite>
