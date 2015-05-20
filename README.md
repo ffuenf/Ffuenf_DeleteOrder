@@ -2,13 +2,15 @@ Ffuenf_DeleteOrder
 ==================
 [![GitHub tag](https://img.shields.io/github/tag/ffuenf/Ffuenf_DeleteOrder.svg)][tag]
 [![Build Status](https://img.shields.io/travis/ffuenf/Ffuenf_DeleteOrder.svg)][travis]
+[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_DeleteOrder/badges/quality-score.png)][code_quality]
+[![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_DeleteOrder/badges/coverage.png)][code_coverage]
 [![Code Climate](https://codeclimate.com/github/ffuenf/Ffuenf_DeleteOrder/badges/gpa.svg)][codeclimate_gpa]
-[![Test Coverage](https://codeclimate.com/github/ffuenf/Ffuenf_DeleteOrder/badges/coverage.svg)][codeclimate_coverage]
 
 [tag]: https://github.com/ffuenf/Ffuenf_DeleteOrder
 [travis]: https://travis-ci.org/ffuenf/Ffuenf_DeleteOrder
+[code_quality]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_DeleteOrder
+[code_coverage]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_DeleteOrder
 [codeclimate_gpa]: https://codeclimate.com/github/ffuenf/Ffuenf_DeleteOrder
-[codeclimate_coverage]: https://codeclimate.com/github/ffuenf/Ffuenf_DeleteOrder
 
 This is a extension for Magento Community Edition that adds the ability to delete orders.
 
