@@ -25,10 +25,8 @@ before_script:
 - phpenv rehash
 - git clone https://github.com/magento-ecg/coding-standard $(pear config-get php_dir)/PHP/CodeSniffer/Standards/Ecg
 script:
-- php phpcs.phar --config-set ignore_warnings_on_exit --standard=$(pear config-get
-  php_dir)/PHP/CodeSniffer/Standards/Ecg --encoding=utf-8 --report-width=180 ./app
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/testing/setup.sh
-  | bash
+- php phpcs.phar --config-set --standard=$(pear config-get php_dir)/PHP/CodeSniffer/Standards/Ecg --encoding=utf-8 --report-width=180 ./app
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/testing/setup.sh | bash
 notifications:
   slack:
     secure: 1W7vTeuLM95dtrlyuxkJu0pfUL3NgilCZulXILJSbG5TMPzymTcXcikzv3/GxSkxhRai1EVPm8IlDilD5b8Oak9t3+VEPyHGbOMKZbPuNi64htjLjTiim/Y0vL0L2u0vgkffgKKpTjUkIPeEqA2DbzUOR0/X0jvEO4p83Oa6xU4=

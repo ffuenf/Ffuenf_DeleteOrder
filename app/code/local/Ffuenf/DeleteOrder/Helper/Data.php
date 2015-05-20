@@ -16,7 +16,7 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
-class Ffuenf_DeleteOrder_Helper_Data extends Ffuenf_Pagespeed_Helper_Core
+class Ffuenf_DeleteOrder_Helper_Data extends Ffuenf_DeleteOrder_Helper_Core
 {
     /**
      * Path for the config for extension active status
