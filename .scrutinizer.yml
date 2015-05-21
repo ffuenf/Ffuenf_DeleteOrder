@@ -1,11 +1,3 @@
-inherit: true
-
-before_commands:
-    - git clone https://github.com/magento-ecg/coding-standard ../magento-ecg/
-
-imports:
-    - php
-
 tools:
     php_sim: true
     php_changetracking: true
@@ -19,9 +11,6 @@ tools:
     php_code_sniffer:
         config:
             standard: 'Zend'
-            include_standards:
-                - ../magento-ecg/
-
 checks:
     php:
         align_assignments: false
