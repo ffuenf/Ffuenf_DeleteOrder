@@ -17,9 +17,10 @@ env:
   - MAGENTO_VERSION=magento-ce-1.7.0.2
   - MAGENTO_VERSION=magento-ce-1.6.2.0
   global:
-    secure: druUINAVvcpDwfG17bpTf5vNU0nyWwLMneDODE8+kOJgcgaamBuhoVW7XSL5ZxtpDednV0XFj6qOzZdCmjtsLcYIUGX/5yd2zLjU6uZdHQnYaNPNHYb7S0OTkcgzbiUCN87A6v6Wxy/+yZATBOP21B5qE5+df5FHLHvRPHQXY30=
+    secure: 1sZZhie3NgyQXLXiXT0KBgJzEu96odpztpO5GVKxqJEUnYvBi9xnfoPYMcStL5UcSB5tF90Pi70a1y1p47VeeEM5ilFRXrW7k9UrK4uDtlPT/rue+JJv+x2OygNeM9e5oLng7NBIplunFNuaR4Y6Ptco2FZuiEQ231eH8yG6zU0=
 script:
-    - curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/testing/setup.sh | bash
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/setup.sh
+  | bash
 notifications:
   slack:
-    secure: PtZquff6TseuVBnJwqViT2snkBkDn44gwdcUWybVQ/9GlLVdFjTH4YCsGqUkM3ADayaVe2j/ZFkz+wz05GkiJDX07zOAVsqCX+1AHZBK/0ftWXXFqC2raWKlDqIENnahEHE4OKp0unTROIej4/WMBOdwfuFuvtnyFeRFb8w5liQ=
+    secure: qD0xPLjLoTR9oL7fvDRU0t1Ko5mpXf5SfRPJp/rjr/sWB1sSqkeq04CUrp1ysrAwHxHb5UQKgk0r+EhAepMNnJPXIscA+iA1DGnjQe5S4kLL8MP2dplZU4qy/gNo1fR9PLjpJFyxEhrV/ZAU/mswUlG4Yy2jhrWkXfIxocvk910=
