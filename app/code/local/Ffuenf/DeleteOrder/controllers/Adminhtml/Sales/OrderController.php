@@ -41,7 +41,7 @@ class Ffuenf_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_
         $tblSalesFlatQuoteAddress = $coreResource->getTableName('sales_flat_quote_address');
         $tblSalesFlatQuoteItem = $coreResource->getTableName('sales_flat_quote_item');
         $tblSalesFlatQuotePayment = $coreResource->getTableName('sales_flat_quotePayment');
-        $tblSalesFlatQuoteShipping_rate = $coreResource->getTableName('sales_flat_quote_shipping_rate');
+        $tblSalesFlatQuoteShippingRate = $coreResource->getTableName('sales_flat_quote_shipping_rate');
         $tblSalesFlatShipmentComment = $coreResource->getTableName('sales_flat_shipment_comment');
         $tblSalesFlatShipmentItem = $coreResource->getTableName('sales_flat_shipment_item');
         $tblSalesFlatShipmentTrack = $coreResource->getTableName('sales_flat_shipment_track');
@@ -54,7 +54,7 @@ class Ffuenf_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_
         $tblSalesFlatOrderGrid = $coreResource->getTableName('sales_flat_order_grid');
         $tblLogQuote = $coreResource->getTableName('log_quote');
         $rscTblL = $coreWrite->fetchCol('SHOW TABLES LIKE ?', '%'.$tblLogQuote);
-        $tblSalesOrderZax = $coreResource->getTableName('sales_order_tax');
+        $tblSalesOrderTax = $coreResource->getTableName('sales_order_tax');
 
         if (!empty($orderIds)) {
             foreach ($orderIds as $orderId) {
