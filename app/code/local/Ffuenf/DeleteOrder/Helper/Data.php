@@ -14,7 +14,7 @@
  * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
  * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
  * @license    http://opensource.org/licenses/mit-license.php MIT License
-*/
+ */
 
 class Ffuenf_DeleteOrder_Helper_Data extends Ffuenf_DeleteOrder_Helper_Core
 {
