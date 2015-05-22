@@ -14,7 +14,7 @@
  * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
  * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
  * @license    http://opensource.org/licenses/mit-license.php MIT License
-*/
+ */
 
 /**
  * @see Ffuenf_DeleteOrder_Helper_Data
@@ -24,11 +24,11 @@
 class Ffuenf_DeleteOrder_Test_Helper_Data extends EcomDev_PHPUnit_Test_Case
 {
     /**
-    * Tests is extension active
-    *
-    * @test
-    * @covers Ffuenf_DeleteOrder_Helper_Data::isExtensionActive
-    */
+     * Tests is extension active
+     *
+     * @test
+     * @covers Ffuenf_DeleteOrder_Helper_Data::isExtensionActive
+     */
     public function testIsExtensionActive()
     {
         $this->assertTrue(

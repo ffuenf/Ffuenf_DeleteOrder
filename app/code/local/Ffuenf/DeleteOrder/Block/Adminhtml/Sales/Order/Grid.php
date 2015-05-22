@@ -14,23 +14,26 @@
  * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
  * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
  * @license    http://opensource.org/licenses/mit-license.php MIT License
-*/
+ */
 
 class Ffuenf_DeleteOrder_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml_Block_Sales_Order_Grid
 {
 
-  /**
-  * Adding Delete Order Mass Action
-  */
-  protected function _prepareMassaction()
-  {
-    $retValue = parent::_prepareMassaction();
-    if ( Mage::helper('ffuenf_deleteorder')->isExtensionActive()) {
-      $this->getMassactionBlock()->addItem('delete_order', array(
-        'label'=> Mage::helper('sales')->__('Delete order'),
-        'url'  => $this->getUrl('*/sales_order/deleteorder'),
-      ));
+    /**
+     * Adding Delete Order Mass Action
+     *
+     * @return $this
+     */
+    protected function _prepareMassaction()
+    {
+        $retValue = parent::_prepareMassaction();
+        if (Mage::helper('ffuenf_deleteorder')->isExtensionActive()) {
+            $this->getMassactionBlock()->addItem('delete_order', array(
+                'label'=> Mage::helper('sales')->__('Delete order'),
+                'url'  => $this->getUrl('*/sales_order/deleteorder'),
+                )
+            );
+        }
+        return $retValue;
     }
-    return $retValue;
-  }
 }
