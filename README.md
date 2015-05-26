@@ -63,6 +63,7 @@ Credits
 -------
 
 * [tvlgiao (EMThemes)](http://www.emthemes.com)
+* [MrGekko](https://github.com/MrGekko)
 
 License and Author
 ------------------
