@@ -16,6 +16,8 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
+require_once 'Mage/Adminhtml/controllers/Sales/OrderController.php';
+
 class Ffuenf_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_Sales_OrderController
 {
 
