@@ -13,6 +13,8 @@ tools:
             standard: 'Zend'
 checks:
     php:
+        coding_standard:
+            name: Magento
         align_assignments: false
         argument_type_checks: true
         assignment_of_null_return: true
@@ -57,17 +59,6 @@ checks:
         method_calls_on_non_object: true
         missing_arguments: true
         more_specific_types_in_doc_comments: true
-        naming_conventions:
-            local_variable: '(^[a-z][a-zA-Z0-9]*$|^this$|^i$)'
-            abstract_class_name: ^Abstract|Factory$|_Abstract$
-            utility_class_name: 'Utils?$'
-            constant_name: '^[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*$'
-            property_name: '(^[a-z][a-zA-Z0-9]*$)'
-            method_name: '^((?:[a-z]|__)[a-zA-Z0-9]*|_construct)$'
-            parameter_name: '(^[a-z][a-zA-Z0-9]*$)'
-            interface_name: '^[A-Z][a-zA-Z0-9]*_?Interface$'
-            type_name: '^[A-Z][a-zA-Z0-9_]*$'
-            exception_name: '^[A-Z][a-zA-Z0-9]*Exception$'
         no_commented_out_code: true
         no_duplicate_arguments: true
         no_else_if_statements: true
