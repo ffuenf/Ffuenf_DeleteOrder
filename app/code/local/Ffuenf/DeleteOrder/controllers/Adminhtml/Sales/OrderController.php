@@ -161,6 +161,6 @@ class Ffuenf_DeleteOrder_Adminhtml_Sales_OrderController extends Mage_Adminhtml_
         } else {
             $this->_getSession()->addError($this->__('Order(s) error.'));
         }
-        $this->_redirect('*/*/');
+        $this->_redirect('adminhtml/sales_order/index');
     }
 }
