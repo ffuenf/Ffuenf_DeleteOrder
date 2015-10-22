@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ffuenf_DeleteOrder>
-            <version>2.0.2</version>
+            <version>2.0.3</version>
         </Ffuenf_DeleteOrder>
     </modules>
     <global>
@@ -45,13 +45,6 @@
     </global>
     <admin>
         <routers>
-            <deleteorder>
-                <use>admin</use>
-                <args>
-                    <module>Ffuenf_DeleteOrder</module>
-                    <frontName>deleteorder</frontName>
-                </args>
-            </deleteorder>
             <adminhtml>
                 <args>
                     <modules>

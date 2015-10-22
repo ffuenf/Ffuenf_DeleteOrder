@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of Ffuenf_DeleteOrder.
 
+## 2.0.3 (October 22, 2015)
+
+* compatibility to [SUPEE-6788](https://info2.magento.com/rs/318-XBX-392/images/SUPEE-6788-Technical%20Details.pdf?mkt_tok=3RkMMJWWfF9wsRolv6jPZKXonjHpfsX66uskXqOxlMI%2F0ER3fOvrPUfGjI4CSMFjI%2BSLDwEYGJlv6SgFSbHNMbhiwrgOUhM%3D)
+
 ## 2.0.2 (May 26, 2015)
 
 * fix critical errors, while magento is trying to autoload Mage_Adminhtml_Sales_OrderController (fixes #13)
