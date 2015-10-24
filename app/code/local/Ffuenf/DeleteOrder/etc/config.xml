@@ -29,12 +29,6 @@
                 <class>Ffuenf_DeleteOrder_Helper</class>
             </ffuenf_deleteorder>
         </helpers>
-        <rewrite>
-            <admin_adminhtml_sales_order>
-                <from><![CDATA[#/admin/sales_order/#]]></from>
-                <to>/deleteorder/adminhtml_sales_order/</to>
-            </admin_adminhtml_sales_order>
-        </rewrite>
         <blocks>
             <adminhtml>
                 <rewrite>
