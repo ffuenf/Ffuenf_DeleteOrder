@@ -29,7 +29,7 @@ class Ffuenf_DeleteOrder_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml
         if (Mage::helper('ffuenf_deleteorder')->isExtensionActive()) {
             $this->getMassactionBlock()->addItem('delete_order', array(
                 'label' => Mage::helper('sales')->__('Delete order'),
-                'url' => $this->getUrl('deleteorder/adminhtml_sales_order/deleteorder'),
+                'url' => $this->getUrl('adminhtml/sales_order/deleteorder'),
                 )
             );
         }
