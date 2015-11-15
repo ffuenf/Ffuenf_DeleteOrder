@@ -30,7 +30,7 @@
                             <config>
                                 <children>
                                     <deleteorder translate="title" module="ffuenf_deleteorder">
-                                        <title>DeleteOrder Module</title>
+                                        <title>DeleteOrder</title>
                                     </deleteorder>
                                 </children>
                             </config>

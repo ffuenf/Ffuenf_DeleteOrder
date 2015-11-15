@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of Ffuenf_DeleteOrder.
 
+## 2.0.4 (November 16, 2015)
+
+* add dependency to [Ffuenf_Common](https://github.com/ffuenf/Ffuenf_Common)
+* common extension structure
+* add more tests
+
 ## 2.0.3 (October 22, 2015)
 
 * compatibility to [SUPEE-6788](https://info2.magento.com/rs/318-XBX-392/images/SUPEE-6788-Technical%20Details.pdf?mkt_tok=3RkMMJWWfF9wsRolv6jPZKXonjHpfsX66uskXqOxlMI%2F0ER3fOvrPUfGjI4CSMFjI%2BSLDwEYGJlv6SgFSbHNMbhiwrgOUhM%3D)
