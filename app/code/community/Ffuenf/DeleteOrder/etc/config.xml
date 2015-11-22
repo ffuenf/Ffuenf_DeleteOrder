@@ -39,6 +39,13 @@
                 </rewrite>
             </adminhtml>
         </blocks>
+        <resources>
+            <ffuenf_deleteorder_setup>
+                <setup>
+                    <module>Ffuenf_DeleteOrder</module>
+                </setup>
+            </ffuenf_deleteorder_setup>
+        </resources>
     </global>
     <admin>
         <routers>
@@ -58,6 +65,9 @@
             </general>
         </deleteorder>
     </default>
+    <uninstall>
+        <filename>uninstall.txt</filename>
+    </uninstall>
     <phpunit>
         <suite>
             <modules>
