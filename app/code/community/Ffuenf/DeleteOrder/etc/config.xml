@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ffuenf_DeleteOrder>
-            <version>2.0.3</version>
+            <version>2.0.4</version>
         </Ffuenf_DeleteOrder>
     </modules>
     <global>
@@ -30,12 +30,22 @@
             </ffuenf_deleteorder>
         </helpers>
         <blocks>
+            <ffuenf_deleteorder>
+                <class>Ffuenf_DeleteOrder_Block</class>
+            </ffuenf_deleteorder>
             <adminhtml>
                 <rewrite>
                     <sales_order_grid>Ffuenf_DeleteOrder_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
                 </rewrite>
             </adminhtml>
         </blocks>
+        <resources>
+            <ffuenf_deleteorder_setup>
+                <setup>
+                    <module>Ffuenf_DeleteOrder</module>
+                </setup>
+            </ffuenf_deleteorder_setup>
+        </resources>
     </global>
     <admin>
         <routers>
@@ -55,6 +65,9 @@
             </general>
         </deleteorder>
     </default>
+    <uninstall>
+        <filename>uninstall.txt</filename>
+    </uninstall>
     <phpunit>
         <suite>
             <modules>

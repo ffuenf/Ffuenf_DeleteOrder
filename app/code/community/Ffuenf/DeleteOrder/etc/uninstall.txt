@@ -1,0 +1,2 @@
+app/code/community/Ffuenf/DeleteOrder
+app/etc/modules/Ffuenf_DeleteOrder.xml

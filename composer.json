@@ -9,26 +9,25 @@
     }
   ],
   "type": "magento-module",
+  "require": {
+    "Ffuenf/Ffuenf_Common": "*",
+    "Ffuenf/Ffuenf_MageTrashApp": "*"
+  },
   "require-dev": {
-    "phpunit/phpunit": "4.*"
+    "aoepeople/composer-installers": "*"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "http://packages.firegento.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/ffuenf/Ffuenf_Common"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/ffuenf/Ffuenf_MageTrashApp"
     }
-  ],
-  "extra": {
-    "magento-root-dir": "./magento/",
-    "map": [
-      [
-        "app/code/local/Ffuenf/DeleteOrder",
-        "app/code/local/Ffuenf/DeleteOrder"
-      ],
-      [
-        "app/etc/modules/Ffuenf_DeleteOrder.xml",
-        "app/etc/modules/Ffuenf_DeleteOrder.xml"
-      ]
-    ]
-  }
+  ]
 }

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Ffuenf_DeleteOrder extension.
  *
@@ -16,27 +15,27 @@
  * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
  * @license    http://opensource.org/licenses/mit-license.php MIT License
  */
-class Ffuenf_DeleteOrder_Helper_Data extends Ffuenf_DeleteOrder_Helper_Core
+
+class Ffuenf_DeleteOrder_Test_Config_Setup extends EcomDev_PHPUnit_Test_Case_Config
 {
     /**
-     * Path for the config for extension active status.
+     * Check if setup resources are defined
+     *
+     * @test
      */
-    const CONFIG_EXTENSION_ACTIVE = 'deleteorder/general/enabled';
+    public function testSetupDefined() {
+        $this->assertSetupResourceDefined();
+        $this->assertSchemeSetupExists();
+    }
 
     /**
-     * Variable for if the extension is active.
+     * Check if update scripts exists for the correct module version
      *
-     * @var bool
+     * @test
      */
-    protected $bExtensionActive;
-
-    /**
-     * Check to see if the extension is active.
-     *
-     * @return bool
-     */
-    public function isExtensionActive()
-    {
-        return $this->getStoreFlag(self::CONFIG_EXTENSION_ACTIVE, 'bExtensionActive');
+    public function testSetupExists() {
+        $this->assertSchemeSetupScriptVersions(
+            '1.0.0', $this->expected('module')->getVersion(), null, 'ffuenf_deleteorder_setup'
+        );
     }
 }
