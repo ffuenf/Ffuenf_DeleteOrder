@@ -2,8 +2,11 @@
 
 This file is used to list changes made in each version of Ffuenf_DeleteOrder.
 
+## 2.0.5 (Unreleased)
+
 ## 2.0.4 (November 16, 2015)
 
+* add uninstallation via [Ffuenf_MageTrashApp](https://github.com/ffuenf/Ffuenf_MageTrashApp)
 * add dependency to [Ffuenf_Common](https://github.com/ffuenf/Ffuenf_Common)
 * common extension structure
 * add more tests
