@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of Ffuenf_DeleteOrder.
 
+## 2.0.6 (January 2, 2016)
+
+* Fixed URL used in order grid (fixes #16)
+
 ## 2.0.5 (December 20, 2015)
 
 * fix dependency to Ffuenf_Common
