@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of Ffuenf_DeleteOrder.
 
+## 2.0.7 (February 25, 2016)
+
+* update travis build-matrix
+* [docs] copyright notice
+
 ## 2.0.6 (January 2, 2016)
 
 * Fixed URL used in order grid (fixes #16)
