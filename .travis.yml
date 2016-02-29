@@ -20,7 +20,7 @@ env:
   - secure: kd3rcqhVCDFB3hs3RJOPIurJBcBoqTuYb2Nfl4o3Jj2deU0f7xjR2QEcO7leCT5mZ6ReUEKjkSPvR1TizDJsQsvS7k7GTO301P8xqWCWZx5s8oZyl2kwvGBU5zgqwtCDpknp4c+m3UNDIFBGw1QZHC+lzBrQRXubCRz1scT3BfA=
   - secure: AmHmJxwwZZ34nFACS5bxioH3leHya05kJD0meUDm3dVi3as2JDid2cmjIa2sHgkJ0js6dJ9M+DMi1MQwqOZbF6aZQMR4qfdpZ8aCOfnmvIDlWNPKOp7R9P2pSkmSWtgjiXAC9apNvOHELNBios8dKg7uHXq1YJpdEwsgEmbDFws=
   matrix:
-  - MAGENTO_VERSION=magento-ce-1.9.2.2
+  - MAGENTO_VERSION=magento-ce-1.9.2.4
   - MAGENTO_VERSION=magento-ce-1.9.1.1
   - MAGENTO_VERSION=magento-mirror-1.8.1.0
   - MAGENTO_VERSION=magento-mirror-1.7.0.2
