@@ -61,7 +61,7 @@
     <default>
         <deleteorder>
             <general>
-                <enabled>0</enabled>
+                <enabled>1</enabled>
             </general>
         </deleteorder>
     </default>
