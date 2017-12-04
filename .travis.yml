@@ -3,10 +3,10 @@ sudo: false
 cache:
   apt: true
   directories:
-    - $HOME/.composer/cache
-    - $HOME/.cache/bin
-    - $HOME/.n98-magerun/modules
-    - $HOME/.cache/magento
+  - "$HOME/.composer/cache"
+  - "$HOME/.cache/bin"
+  - "$HOME/.n98-magerun/modules"
+  - "$HOME/.cache/magento"
 php:
 - 5.5
 - 5.6
@@ -24,9 +24,9 @@ matrix:
 env:
   global:
   - APPNAME=Ffuenf_DeleteOrder
-  - secure: 2R4h7TgyLLVN4UfQNNonv/XVBvUopEdy4U0+9CpsAhzvYCY1hk2YJuTxNl9Rzs9vPH6bf4uSOvjtxChJwv8v5gTtodkP1NFTQidFxXi0j00/l7e8Zu/MuLSv9rdm5enRUoC8nV+xjkXcRjjGJuGBNkEMXjcqAwSoUaKxrB7kIcg=
-  - secure: r1V0ctK+g1V/doRIOfCbvHZuOoBsjqVhULPndj5nEpZGzrgX1xm8vOpYIW7jdwrc8/TGpF4oqFzKDR4cdjhU43SJly3xmL9uCH30LzvT1cYuUbdD11TityLrVzUjogM6XZfvy+DGDS6QlE+8MRQpcdPjPew+Jr6vA6rsp0IvkIY=
-  - secure: k4Qt3bzRAq5d+gn2hq+VyAz3lLi5CicknkuY+uFyf3Efdv1qY06kaENhiiDtrNum8Tc1dPFO4GZoJMKyKSJmvXwq6guJG5rKhjBdRAvXI7tMZE1bbW2pLOd349FFEIZOSOKgzilLkOlctsGh1QvFo20AhckCE6525zUDi4SM6TA=
+  - secure: ZI79v6djPdLLW4NoneXFRONInvtiX4bLuygqD0V67u5kGzPbIJsRVBYUnqd6wguVHxy/UBxlqHFj02aqJDPqh4a8qu0zjQaoBhugir2iHA4hUDy808F9EqUWzf7f0APB+V085kqlbPOuX7FQqoTt54maeYdgHlri/+E5ThFjqmo=
+  - secure: BQeCNaUbyfP5tiWir0eDC0kq9cdcYC7oDEcGlPoSJ6WxoeOmEzlPD2CIwycDlXixwXtCRmD10iJKSrEYB+WWtCg24JM3bl6KvDZKaKB7AjTU5BYmws2rDY2q0ohNvv3+Qhf23Bo8tasowfyGK8hQxW3jjzDeZ6/XFp7beElMqs0=
+  - secure: TVvagZaT/0+RF86i5ZgkAwzMjDP3nU/RDEG5suqt8NkLsEMhIu2CiaxbBq1RWQRUaUI2RsVB2WI79rjxjBJtbUAlU+w+YTriT4Ps1KufyfmQLqKUI4FOJ0xYl0VG7+IEpbJh1SKO2fH2njZYlUPkjwwjBCgTMs5kwIJjYqTKsfc=
   matrix:
   - MAGENTO_VERSION=ce-1.9.3.7
   - MAGENTO_VERSION=ce-1.9.2.4
@@ -38,8 +38,8 @@ before_install:
 - curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/before_install.sh
   | bash
 script:
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/script.sh
-  | bash
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/script.sh |
+  bash
 deploy:
   provider: releases
   file:
@@ -50,7 +50,7 @@ deploy:
     branch: master
     tags: true
   api_key:
-    secure: I1igqcnodDXVTJxreY6lWtALUx+Njquim9NBmyBdsSt3ViKXrNBaYxmLgipzdm9qC1oQcdxuIvKdMIUUZTHRQBabHpWXfEt3jy4DI9QMUfjUGqGb2F6phiqKDLNXjME+JQlO+mGBCKgXwkHZdQvuVwrNkbcnFZrna7RTunwzkp4=
+    secure: 0xfpzy1IeZC0tWyemBWrNvH74loVx102CJG7VQzCxdeeYeifDbBfNqROq/2V1OOdmMBM2HnOrR/xQkMmjicVsW7rWjXjjvHOn3XkKJPVK2nArKUF8i8+MNGf4FmiTvxhfnS17O2rXGrUmOM9JIBoV0eMxHgqa0G8jSqTE1qfbMQ=
 notifications:
   slack:
-    secure: ftAq2hLQMkUmbjbQHK/ZbOE9DE564kb+SnuVlxV14up895e49z1Ro4dPv1+RaZoRnpfX5Ud1nyH9l9S78LwHa/+vTyGKUDvqoYiczVymwkXJttt5I/HsO9gbZHMWJGGBhAK8/6puDT3xVWVKdShFXMOMaegOkW6Shin0PewHfTA=
+    secure: wUeaYdxW/A0OFi35CNoemXvC4cOc6GW1E8g7HZZMq/ETYCifNooc0ZKRaBFPX8Pw3UBgxEjGV72U/Gg02G23Cv4w/Cy8MCi37fSNbV6tgES0HMaqTqSX0FOWyfpDqavpugu5FvdTTkdtOBVrpejo9249evEFRMYWBMIAL/qyLCQ=
