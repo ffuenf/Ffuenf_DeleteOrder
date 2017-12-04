@@ -35,10 +35,10 @@ env:
   - MAGENTO_VERSION=ce-1.7.0.2
   - MAGENTO_VERSION=ce-1.6.2.0
 before_install:
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/before_install.sh
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/before_install.sh
   | bash
 script:
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/script.sh
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/script.sh
   | bash
 deploy:
   provider: releases
