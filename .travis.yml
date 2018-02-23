@@ -8,38 +8,30 @@ cache:
   - "$HOME/.n98-magerun/modules"
   - "$HOME/.cache/magento"
 php:
-- 5.5
-- 5.6
 - 7.0
 - 7.1
 - 7.2
 matrix:
   fast_finish: true
   allow_failures:
-  - php: 5.6
-    env: MAGENTO_VERSION=ce-1.8.1.0
-  - php: 7.0
   - php: 7.1
   - php: 7.2
 env:
   global:
   - APPNAME=Ffuenf_DeleteOrder
-  - secure: ZI79v6djPdLLW4NoneXFRONInvtiX4bLuygqD0V67u5kGzPbIJsRVBYUnqd6wguVHxy/UBxlqHFj02aqJDPqh4a8qu0zjQaoBhugir2iHA4hUDy808F9EqUWzf7f0APB+V085kqlbPOuX7FQqoTt54maeYdgHlri/+E5ThFjqmo=
-  - secure: BQeCNaUbyfP5tiWir0eDC0kq9cdcYC7oDEcGlPoSJ6WxoeOmEzlPD2CIwycDlXixwXtCRmD10iJKSrEYB+WWtCg24JM3bl6KvDZKaKB7AjTU5BYmws2rDY2q0ohNvv3+Qhf23Bo8tasowfyGK8hQxW3jjzDeZ6/XFp7beElMqs0=
-  - secure: TVvagZaT/0+RF86i5ZgkAwzMjDP3nU/RDEG5suqt8NkLsEMhIu2CiaxbBq1RWQRUaUI2RsVB2WI79rjxjBJtbUAlU+w+YTriT4Ps1KufyfmQLqKUI4FOJ0xYl0VG7+IEpbJh1SKO2fH2njZYlUPkjwwjBCgTMs5kwIJjYqTKsfc=
+  - secure: h0qz0QUZNCOe2A5bUvX/GBWNA+SVkJeUvVJEACk4BgtD/CbkhprgQ+UfPfkcNa5KFbvUhd/7aDnX4AbnnY2OfHOQAB1hy/NVDCcrcPVw3Qe+AibEdYSfh2o+NHru9nhRCsvAQ5qb6IK1+Hk+TT6fAdyXajim0T1Bpr/CbsuEF4I=
+  - secure: rpooNoFa9JZVklgiKBCIw2ooXR6bwyU7cfyrVLYnC6y99hlBTgteVKriazyedWyrvBZFHGKXyskH2m4RbTdA6S8/GVd6b9qMZJYBVmuitmMoS6rwprNBu5hoVejysM9Bb8ZwqHCVlICdufo/fRETdEbj10NT0oEappUQ890oNw0=
+  - secure: bM8B0HiEMnwxmISlL9ZDf6iaH/8Zfu/ibiDvacCMNQE8fOCEnM5WEEF9UBn2CJouuJUPPs6v3wFSTqoT4+XsH/m9kTnJDiAkfl0KUKRpA1zewe9h4Syuy1BJEgYq3AO6Sdkbn5XwETbMhQgER9HCxRIkSBnLbs+L49wZKoVNEGk=
   matrix:
   - MAGENTO_VERSION=ce-1.9.3.7
   - MAGENTO_VERSION=ce-1.9.2.4
   - MAGENTO_VERSION=ce-1.9.1.1
-  - MAGENTO_VERSION=ce-1.8.1.0
-  - MAGENTO_VERSION=ce-1.7.0.2
-  - MAGENTO_VERSION=ce-1.6.2.0
 before_install:
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/before_install.sh
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/before_install.sh
   | bash
 script:
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/dev/script.sh |
-  bash
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/script.sh
+  | bash
 deploy:
   provider: releases
   file:
@@ -50,7 +42,7 @@ deploy:
     branch: master
     tags: true
   api_key:
-    secure: 0xfpzy1IeZC0tWyemBWrNvH74loVx102CJG7VQzCxdeeYeifDbBfNqROq/2V1OOdmMBM2HnOrR/xQkMmjicVsW7rWjXjjvHOn3XkKJPVK2nArKUF8i8+MNGf4FmiTvxhfnS17O2rXGrUmOM9JIBoV0eMxHgqa0G8jSqTE1qfbMQ=
+    secure: l10KK6OzGsU6zGQD2nLUdGRDIXogQP+PL/z1VKekKxTNbmrc2OMvU393SERz3o4XPoIpOD5cbXfP6nrblncYNykE7IzmGAv8xq5vdI0SbPMi1qE0XzrWdj0TKNo3f1ipNIygnAEyxnstiXIc1jkbXG4M/RL45V0yfgenuP48VoY=
 notifications:
   slack:
-    secure: wUeaYdxW/A0OFi35CNoemXvC4cOc6GW1E8g7HZZMq/ETYCifNooc0ZKRaBFPX8Pw3UBgxEjGV72U/Gg02G23Cv4w/Cy8MCi37fSNbV6tgES0HMaqTqSX0FOWyfpDqavpugu5FvdTTkdtOBVrpejo9249evEFRMYWBMIAL/qyLCQ=
+    secure: ZpGNN2zuS6A54rGo6vQD+1K03qP9PyeVsxQpLHixEw9cP/pVprMN4PBtxjg7y9RVyxDCVv8PVqKBEGvwpkC4VjmsALt4nGdKdBghRGR6+3vcYjV3Pur6S5doUsPZiKKPNIDogq5VIAvUcRN1/BOVfUZZr3Hm47Ex0nJWdNt7MuM=

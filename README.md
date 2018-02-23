@@ -18,19 +18,16 @@ The following versions are supported and tested:
 * Magento Community Edition 1.9.3.7
 * Magento Community Edition 1.9.2.4
 * Magento Community Edition 1.9.1.1
-* Magento Community Edition 1.8.1.0
-* Magento Community Edition 1.7.0.2
-* Magento Community Edition 1.6.2.0
 
 Other versions are assumed to work.
 
 Requirements
 ------------
 
-|                                                                               | PHP 5.5           | PHP 5.6           | PHP 7.0           | PHP 7.1              | PHP 7.2              |
-| ----------------------------------------------------------------------------- | ----------------- | ----------------- | ----------------- | -------------------- | -------------------- |
-| [EOL](https://secure.php.net/supported-versions.php) / SEC-FIX / STABLE / RC  | EOL               | SEC-FIX           | SEC-FIX           | **STABLE**           | **STABLE**           |
-| automated tests on [travis]                                                   | **required pass** | **required pass** | **required pass** | **allowed failures** | **allowed failures** |
+|                                                                               | PHP 7.0           | PHP 7.1              | PHP 7.2              |
+| ----------------------------------------------------------------------------- | ----------------- | -------------------- | -------------------- |
+| [EOL](https://secure.php.net/supported-versions.php) / SEC-FIX / STABLE / RC  | SEC-FIX           | **STABLE**           | **STABLE**           |
+| automated tests on [travis]                                                   | **required pass** | **allowed failures** | **allowed failures** |
 
 Magento Community Edition officially supports PHP 5.4 and PHP 5.5.
 
@@ -90,7 +87,7 @@ License and Author
 ------------------
 
 - Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
-- Copyright:: 2017, ffuenf
+- Copyright:: 2018, ffuenf
 
 The MIT License (MIT)
 
