@@ -1,2 +1,5 @@
 config:
   default/deleteorder/general/enabled: 1
+  default/deleteorder/log/enable: 1
+  default/deleteorder/log/profile_enable: 1
+  default/deleteorder/log/exception_enable: 1

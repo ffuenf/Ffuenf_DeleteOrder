@@ -14,16 +14,15 @@ php:
 matrix:
   fast_finish: true
   allow_failures:
-  - php: 7.1
   - php: 7.2
 env:
   global:
   - APPNAME=Ffuenf_DeleteOrder
-  - secure: h0qz0QUZNCOe2A5bUvX/GBWNA+SVkJeUvVJEACk4BgtD/CbkhprgQ+UfPfkcNa5KFbvUhd/7aDnX4AbnnY2OfHOQAB1hy/NVDCcrcPVw3Qe+AibEdYSfh2o+NHru9nhRCsvAQ5qb6IK1+Hk+TT6fAdyXajim0T1Bpr/CbsuEF4I=
-  - secure: rpooNoFa9JZVklgiKBCIw2ooXR6bwyU7cfyrVLYnC6y99hlBTgteVKriazyedWyrvBZFHGKXyskH2m4RbTdA6S8/GVd6b9qMZJYBVmuitmMoS6rwprNBu5hoVejysM9Bb8ZwqHCVlICdufo/fRETdEbj10NT0oEappUQ890oNw0=
-  - secure: bM8B0HiEMnwxmISlL9ZDf6iaH/8Zfu/ibiDvacCMNQE8fOCEnM5WEEF9UBn2CJouuJUPPs6v3wFSTqoT4+XsH/m9kTnJDiAkfl0KUKRpA1zewe9h4Syuy1BJEgYq3AO6Sdkbn5XwETbMhQgER9HCxRIkSBnLbs+L49wZKoVNEGk=
+  - secure: A4ifSdivBn5K8ekZXmvyDtmN4/39+wKNOljsOkyxTLKgDjsKkC5u8wx43MQBDv0YRQsA7i3QVLo6a7QVfww8uRy1wmz+Pg9DDNBvZJXBNVU0hT11wo/thQhQKanra1arSm98LWl3rW7ICenTe5BgnzPIYqmzZAFu3LyJtk4h7IU=
+  - secure: Dqhyhm7Y26NCh8BCgwNoS2ubfI75koyrKragGSkQNcAcfuKnm4k5LVgT3nIbeUp5jVqmkfuoCBTzicHBFuf8Mb4PdzU1ppqH60qnqCMzi0jo0FodaMTzUkyPcGtzTE8E3TNfMkRTfVn2pVB7K66Y7NuWxSUgGok91jcjq1X5ofA=
+  - secure: 4iYD4/H0I6SxRKDEGHjww8zHE7CwEuGEhJpHpFLXS+kDBtjob4ZaJ6BLbvoKibOnt0zQ29J7tBNaM4DWE7oTjVjvhXVfccgF7kElkjCBLuwJ3Pkc8PpmZTNB42b9be7K2yUzheGTfkFuh4QDEacMCR68fJmlCnMkndjx2K1r3Cw=
   matrix:
-  - MAGENTO_VERSION=ce-1.9.3.7
+  - MAGENTO_VERSION=ce-1.9.3.10
   - MAGENTO_VERSION=ce-1.9.2.4
   - MAGENTO_VERSION=ce-1.9.1.1
 before_install:
@@ -42,7 +41,7 @@ deploy:
     branch: master
     tags: true
   api_key:
-    secure: l10KK6OzGsU6zGQD2nLUdGRDIXogQP+PL/z1VKekKxTNbmrc2OMvU393SERz3o4XPoIpOD5cbXfP6nrblncYNykE7IzmGAv8xq5vdI0SbPMi1qE0XzrWdj0TKNo3f1ipNIygnAEyxnstiXIc1jkbXG4M/RL45V0yfgenuP48VoY=
+    secure: 1AOSWx8P6ateDbBBOqj6QsiOfy8yu+rGCHjtSmadtuH5bBEs0YVyZGS6dant2PL3ukmnDwxoC22DVyVrlYQi/LiXvhYrLsqRZSpvdEIs2vgEYPIA7rS7PmxhfFuP2z3RVqi4/TO0cF+uxneGDqcc8NckrNaajftVMzYlg6vjfh0=
 notifications:
   slack:
-    secure: ZpGNN2zuS6A54rGo6vQD+1K03qP9PyeVsxQpLHixEw9cP/pVprMN4PBtxjg7y9RVyxDCVv8PVqKBEGvwpkC4VjmsALt4nGdKdBghRGR6+3vcYjV3Pur6S5doUsPZiKKPNIDogq5VIAvUcRN1/BOVfUZZr3Hm47Ex0nJWdNt7MuM=
+    secure: Of0cTeBFOr82MdUapqa51gkYZg9uuoBH+L66FOF1damyDIvRGSf3UxozNEhNqG4JqElSJUhZNLoLBKfG7nB690XVSrGTvBlXw8IPyA+wvQ9EUSConsd8CNAUPvLKRHP7+1nYJdaEim+I+3Z4SgGwLvqRXWJbvFH1JmcDxI9kylI=
