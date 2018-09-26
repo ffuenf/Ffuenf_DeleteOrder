@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of Ffuenf_DeleteOrder.
 
+## 2.0.8 (September 26, 2018)
+
+* update travis build-matrix
+* add logging configuration
+
 ## 2.0.7 (February 25, 2016)
 
 * update travis build-matrix

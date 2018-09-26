@@ -27,12 +27,9 @@ Requirements
 |                                                                               | PHP 7.0           | PHP 7.1              | PHP 7.2              |
 | ----------------------------------------------------------------------------- | ----------------- | -------------------- | -------------------- |
 | [EOL](https://secure.php.net/supported-versions.php) / SEC-FIX / STABLE / RC  | SEC-FIX           | **STABLE**           | **STABLE**           |
-| automated tests on [travis]                                                   | **required pass** | **allowed failures** | **allowed failures** |
+| automated tests on [travis]                                                   | **required pass** | **required pass**    | **allowed failures** |
 
-Magento Community Edition officially supports PHP 5.4 and PHP 5.5.
-
-Non-official compatibility to PHP 5.6 may be reached by following the tips on [Use of iconv.internal_encoding is deprecated](https://magento.stackexchange.com/questions/34015/magento-1-9-php-5-6-use-of-iconv-internal-encoding-is-deprecated).
-Non-official compatibility to PHP 7.0 may be reached by using [Inchoo_PHP7](https://github.com/Inchoo/Inchoo_PHP7).
+Magento Community Edition [officially supports PHP 7.2](https://magento.com/tech-resources/download#download2240) as of 09-13-2018.
 
 Installation
 ------------
