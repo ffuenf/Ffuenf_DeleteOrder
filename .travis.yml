@@ -18,9 +18,9 @@ matrix:
 env:
   global:
   - APPNAME=Ffuenf_DeleteOrder
-  - secure: yaImvLww1FGWtZfuFqyD6MsWzKZdx68Mpy/fon4lchd2ld32HGOh5mG9jdtkZ9xM65n8UGJANAPcGUcI8nceFlIlGTEF61d/StS3XciNYzCOBxxGWJmvG+CcAdVp0zIIpydN5M2bsFTBhdWWs+X+KBxSuyY1jJlHYSt5+FcUPxo=
-  - secure: W8fStL3whAoKZhqjKarz9TPAI17gctQofRjuNAmmzGG1UOR6zFISwKk47F0aQnI2F1V+Ny1poMdEAEBIJwojWGLfa1S4jgoS5uyANBKEjrGV6jXrLitmQkXqE3167i8V2PkBPAf3UkXPg/qvQPWfoGYbhH3t0uYi87ALodvCxCE=
-  - secure: WFrNOBRE7dFp7P3xQocED6Z5ES8D7L3Rk81UskSx+pTGoL9ashm3hhLuobjy3Kk4AK4+X0Q3Eu5rPdcKULC4MQ67ASSJ2nBuDoQunnULYoc4h0twom3AhGNnZGuZIp4U8Sn7HarKLqEec0PeiuGOyYdPiAJ5lPEERGyt6b1OPqU=
+  - secure: gFyjyFP64t7cK+QVZ+UKH3td7OjXGQZ2aDmNWT5LDuIZx9fQvrwXx6yUDakXoqOiANDklgzH/Y3djYakb22miBwLwY/I4vCfcEKgNCa2NWrWHJKRPKv2UTPxIrmsRg3ZKSDoHs+Y02ryqETOw6FEi4eDeTyEJmixA9jYoAr/Ch8=
+  - secure: VsFR1wQV/aV8fCLMgXgBBjsFMFN11ZJgykXCnUJQGDEx+BLyYVtyXkTH6hm7PIOvTdO3Gz0JdzWNCYT9YRB06/H7lvp07g/f/qyPP+EJAUuOhTpYszoeIpQg2oNt7sFNkmI1b/XYCXzSATF+tZwgg8M8RS2lKQdw4OUKO/BI4X8=
+  - secure: CeVPTW1p3PfbnrBncRkshYcAtbNxdscQ07r1UhXe7/AFMsophqG3/lgpA9scrMM+LRPiPUanxSa67SEQ5sGsg5i3BewJ63ClsgIiizvOqYY7qYpdjfLs18AH7+DelpfDWXnVAoUis8RQG1F1EVjqQJcJWme86q9nb8ss9ZAiOy4=
   matrix:
   - MAGENTO_VERSION=ce-1.9.3.10
   - MAGENTO_VERSION=ce-1.9.2.4
@@ -41,7 +41,7 @@ deploy:
     branch: master
     tags: true
   api_key:
-    secure: guC3Wxvk7chTmoGpjD7gv12/2kupn9Im16i48Ifh0l46d/Er47s6/B4P6fZnes/l0k0sgj6ijZTf3CXfhai+gLeOIuQU8kCLtFsTotquYwqZ3Cgc5CF6q4n12Lmxt8xlolA0akbN9S99TmWSPTouPY18plW3vajHLuqucVRYrYo=
+    secure: RsY+ADT34SQEkuHbKJ8mK8Ev+Zyd7oPUCEkedXTkueVfp6PMNFhRGptFx5hqDR3mVY9XPmlzkODg6VWqTW+cdV86ACJ9MMXQ86d6s1FqsF8g2/t0Err8CAmd1B5iFo+YlU5QCPNMGU4sAHluugD7Y/ErMXJz+Ul7rdv7AOXvIK0=
 notifications:
   slack:
-    secure: oLCEicC5sRKZMTjC9ZjE7yQDVTpLmNDoG2c39uRkucB76dNB32yPoQYnW+4Yaa89OiYinfpebKdI6EMjMpLcyKwBhaHlsRJaJu5QKMoyGjifWNdAngfnRnC7LJAsUhe/J8OGCDXI0EJdUkRQQWA/MlB5y6hHXO1zsn0KcrqEf4Y=
+    secure: dGa0DQXE7JxuMoido36l1JVS9UCtQ1uOyv8hfJjgXcxVdgfp0GIJ7r6bmL7M0Sce/lHgkpEUJflUgSxWqtlYBipBy0X94S9kveu/pZ3RhT1ZLPw6Rk2IgxyU0SxS4u0PIGSsuWZNJ/tgINwxYqyvhcNjhF2uNxlXwA7zX8FugZo=
