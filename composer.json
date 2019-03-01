@@ -1,33 +1,33 @@
 {
-  "name": "Ffuenf/Ffuenf_DeleteOrder",
-  "license": "MIT",
-  "description": "Enhance Magento feature with ability to delete orders",
-  "authors": [
-    {
-      "name": "Achim Rosenhagen",
-      "email": "a.rosenhagen@ffuenf.de"
-    }
-  ],
-  "type": "magento-module",
-  "require": {
-    "Ffuenf/Ffuenf_Common": "*",
-    "Ffuenf/Ffuenf_MageTrashApp": "*"
-  },
-  "require-dev": {
-    "aoepeople/composer-installers": "*"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.firegento.com"
+    "name": "ffuenf/ffuenf_deleteorder",
+    "license": "MIT",
+    "description": "Enhance Magento feature with ability to delete orders",
+    "authors": [
+        {
+            "name": "Achim Rosenhagen",
+            "email": "a.rosenhagen@ffuenf.de"
+        }
+    ],
+    "type": "magento-module",
+    "require": {
+        "ffuenf/ffuenf_common": "*",
+        "ffuenf/ffuenf_magetrashapp": "*"
     },
-    {
-      "type": "vcs",
-      "url": "https://github.com/ffuenf/Ffuenf_Common"
+    "require-dev": {
+        "aoepeople/composer-installers": "*"
     },
-    {
-      "type": "vcs",
-      "url": "https://github.com/ffuenf/Ffuenf_MageTrashApp"
-    }
-  ]
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.firegento.com"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ffuenf/Ffuenf_Common"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ffuenf/Ffuenf_MageTrashApp"
+        }
+    ]
 }
