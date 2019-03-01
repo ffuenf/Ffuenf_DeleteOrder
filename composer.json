@@ -10,8 +10,8 @@
     ],
     "type": "magento-module",
     "require": {
-        "Ffuenf/Ffuenf_Common": "*",
-        "Ffuenf/Ffuenf_MageTrashApp": "*"
+        "ffuenf/ffuenf_common": "*",
+        "ffuenf/ffuenf_magetrashapp": "*"
     },
     "require-dev": {
         "aoepeople/composer-installers": "*"
