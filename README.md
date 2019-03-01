@@ -15,7 +15,8 @@ Platform
 
 The following versions are supported and tested:
 
-* Magento Community Edition 1.9.3.7
+* Magento Community Edition 1.9.4.0
+* Magento Community Edition 1.9.3.10
 * Magento Community Edition 1.9.2.4
 * Magento Community Edition 1.9.1.1
 
@@ -24,10 +25,10 @@ Other versions are assumed to work.
 Requirements
 ------------
 
-|                                                                               | PHP 7.0           | PHP 7.1              | PHP 7.2              |
-| ----------------------------------------------------------------------------- | ----------------- | -------------------- | -------------------- |
-| [EOL](https://secure.php.net/supported-versions.php) / SEC-FIX / STABLE / RC  | SEC-FIX           | **STABLE**           | **STABLE**           |
-| automated tests on [travis]                                                   | **required pass** | **required pass**    | **allowed failures** |
+|                                                                               | PHP 7.0           | PHP 7.1              | PHP 7.2              | PHP 7.3              |
+| ----------------------------------------------------------------------------- | ----------------- | -------------------- | -------------------- | -------------------- |
+| [EOL](https://secure.php.net/supported-versions.php) / SEC-FIX / STABLE / RC  | SEC-FIX           | SEC-FIX              | **STABLE**           | **STABLE**           |
+| automated tests on [travis]                                                   | **required pass** | **required pass**    | **required pass**    | **allowed failures** |
 
 Magento Community Edition [officially supports PHP 7.2](https://magento.com/tech-resources/download#download2240) as of 09-13-2018.
 

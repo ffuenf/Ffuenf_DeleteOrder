@@ -11,10 +11,26 @@ php:
 - 7.0
 - 7.1
 - 7.2
+- 7.3
 matrix:
   fast_finish: true
   allow_failures:
+  - php: 7.0
+    env: MAGENTO_VERSION=ce-1.9.3.10
+    env: MAGENTO_VERSION=ce-1.9.2.4
+    env: MAGENTO_VERSION=ce-1.9.1.1
+  - php: 7.1
+    env: MAGENTO_VERSION=ce-1.9.3.10
+    env: MAGENTO_VERSION=ce-1.9.2.4
+    env: MAGENTO_VERSION=ce-1.9.1.1
   - php: 7.2
+    env: MAGENTO_VERSION=ce-1.9.3.10
+    env: MAGENTO_VERSION=ce-1.9.2.4
+    env: MAGENTO_VERSION=ce-1.9.1.1
+  - php: 7.3
+    env: MAGENTO_VERSION=ce-1.9.3.10
+    env: MAGENTO_VERSION=ce-1.9.2.4
+    env: MAGENTO_VERSION=ce-1.9.1.1
 env:
   global:
   - APPNAME=Ffuenf_DeleteOrder
@@ -22,6 +38,7 @@ env:
   - secure: VsFR1wQV/aV8fCLMgXgBBjsFMFN11ZJgykXCnUJQGDEx+BLyYVtyXkTH6hm7PIOvTdO3Gz0JdzWNCYT9YRB06/H7lvp07g/f/qyPP+EJAUuOhTpYszoeIpQg2oNt7sFNkmI1b/XYCXzSATF+tZwgg8M8RS2lKQdw4OUKO/BI4X8=
   - secure: CeVPTW1p3PfbnrBncRkshYcAtbNxdscQ07r1UhXe7/AFMsophqG3/lgpA9scrMM+LRPiPUanxSa67SEQ5sGsg5i3BewJ63ClsgIiizvOqYY7qYpdjfLs18AH7+DelpfDWXnVAoUis8RQG1F1EVjqQJcJWme86q9nb8ss9ZAiOy4=
   matrix:
+  - MAGENTO_VERSION=ce-1.9.4.0
   - MAGENTO_VERSION=ce-1.9.3.10
   - MAGENTO_VERSION=ce-1.9.2.4
   - MAGENTO_VERSION=ce-1.9.1.1
