@@ -17,19 +17,23 @@ matrix:
   allow_failures:
   - php: 7.0
     env: MAGENTO_VERSION=ce-1.9.3.10
+  - php: 7.0
     env: MAGENTO_VERSION=ce-1.9.2.4
-    env: MAGENTO_VERSION=ce-1.9.1.1
   - php: 7.1
     env: MAGENTO_VERSION=ce-1.9.3.10
+  - php: 7.1
     env: MAGENTO_VERSION=ce-1.9.2.4
-    env: MAGENTO_VERSION=ce-1.9.1.1
   - php: 7.2
     env: MAGENTO_VERSION=ce-1.9.3.10
+  - php: 7.2
     env: MAGENTO_VERSION=ce-1.9.2.4
+  - php: 7.2
     env: MAGENTO_VERSION=ce-1.9.1.1
   - php: 7.3
     env: MAGENTO_VERSION=ce-1.9.3.10
+  - php: 7.3
     env: MAGENTO_VERSION=ce-1.9.2.4
+  - php: 7.3
     env: MAGENTO_VERSION=ce-1.9.1.1
 env:
   global:
